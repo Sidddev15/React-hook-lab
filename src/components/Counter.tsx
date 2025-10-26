@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Counter() {
-	const [count, setCount] = useState<number>(() => {
-		const raw = localStorage.getItem("count");
-		return raw ? Number(raw) : 0;
-	});
+  const [count, setCount] = useState<number>(() => {
+    const raw = localStorage.getItem("count");
+    return raw ? Number(raw) : 0;
+  });
 
   useEffect(() => {
     localStorage.setItem("count", String(count));
@@ -12,17 +12,41 @@ export default function Counter() {
 
   const isFirst = useRef(true);
   useEffect(() => {
-    if (isFirst.current) {isFirst.current = false; return;}
+    if (isFirst.current) {
+      isFirst.current = false;
+      return;
+    }
   }, [count]);
 
   return (
-    <section>
-      <h2>Counter</h2>
-      <div>
-        <button aria-label="Decrease Count" onClick={() => {setCount(c => c - 1)}}>Decrease</button>
+    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+      <h2 style={{ margin: "20px 0" }}>Counter</h2>
+      <div style={{ display: "flex", gap: "3rem", alignItems: "center", flexDirection: 'column' }}>
         <output>{count}</output>
-        <button aria-label="Increase Count" onClick={() => {setCount(c => c + 1)}}>Increase</button>
-        <button aria-label="Reset Count" onClick={() => setCount(0)}>Reset</button>
+        <div style={{ display: 'flex', gap: '10px', flexDirection: 'column'}}>
+          <button
+            aria-label="Increase Count"
+            onClick={() => {
+              setCount((c) => c + 1);
+            }}
+          >
+            Increase
+          </button>
+          <button
+            aria-label="Decrease Count"
+            onClick={() => {
+              setCount((c) => c - 1);
+            }}
+          >
+            Decrease
+          </button>
+          <button
+            aria-label="Reset Count"
+            onClick={() => setCount(0)}
+          >
+            Reset
+          </button>
+        </div>
       </div>
     </section>
   );
