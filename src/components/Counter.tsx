@@ -20,10 +20,17 @@ export default function Counter() {
 
   return (
     <section style={{ height: "auto", width: "100%" }}>
-      <h2 style={{ margin: "20px 0" }}>Counter</h2>
-      <div style={{ display: "flex", gap: "3rem", alignItems: "center", flexDirection: 'column' }}>
+      <h2>Counter</h2>
+      <div
+        style={{
+          display: "flex",
+          gap: "3rem",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
         <output>{count}</output>
-        <div style={{ display: 'flex', gap: '10px', flexDirection: 'row'}}>
+        <div style={{ display: "flex", gap: "10px", flexDirection: "row" }}>
           <button
             aria-label="Increase Count"
             onClick={() => {
@@ -40,10 +47,7 @@ export default function Counter() {
           >
             Decrease
           </button>
-          <button
-            aria-label="Reset Count"
-            onClick={() => setCount(0)}
-          >
+          <button aria-label="Reset Count" onClick={() => setCount(0)}>
             Reset
           </button>
         </div>
