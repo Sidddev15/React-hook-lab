@@ -10,7 +10,7 @@ export default function WindowSize() {
   }, []);
 
   return (
-    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+    <section style={{ height: "auto", width: "100%" }}>
       <h2 style={{ paddingBottom: "20px"}}>Window Size effect with cleanup</h2>
       <p><strong>{size.w}</strong> x <strong>{size.h}</strong></p>
     </section>

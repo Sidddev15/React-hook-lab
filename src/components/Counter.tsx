@@ -19,11 +19,11 @@ export default function Counter() {
   }, [count]);
 
   return (
-    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+    <section style={{ height: "auto", width: "100%" }}>
       <h2 style={{ margin: "20px 0" }}>Counter</h2>
       <div style={{ display: "flex", gap: "3rem", alignItems: "center", flexDirection: 'column' }}>
         <output>{count}</output>
-        <div style={{ display: 'flex', gap: '10px', flexDirection: 'column'}}>
+        <div style={{ display: 'flex', gap: '10px', flexDirection: 'row'}}>
           <button
             aria-label="Increase Count"
             onClick={() => {

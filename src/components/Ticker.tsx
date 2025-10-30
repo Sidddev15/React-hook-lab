@@ -8,7 +8,7 @@ export default function Ticker() {
   useInterval(() => setTick(t => t + 1), enabled ? 1000 : null);
 
   return (
-    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+    <section style={{ height: "auto", width: "100%" }}>
       <h2 style={{ padding: "0 0 40px"}}>Ticker (Custom Interval hook)</h2>
       <div style={{display: "flex", flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '20px'  }}>
         <output aria-live="polite">{tick}s</output>

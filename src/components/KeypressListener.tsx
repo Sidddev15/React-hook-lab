@@ -15,7 +15,7 @@ export default function KeyPressListener() {
   }, []);
 
   return (
-    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+    <section style={{ height: "auto", width: "100%" }}>
       <h2>Keyboard Event Listener</h2>
       <p>Press any key -- Last: <strong>{lastKey || "none"}</strong> </p>
     </section>

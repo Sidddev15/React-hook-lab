@@ -20,7 +20,7 @@ h5,
 h6 {
   font-family: "Special Gothic", sans-serif;
   margin: 0;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   font-weight: 500;
 }
 
@@ -30,7 +30,7 @@ span,
 input {
   font-family: "Arimo", sans-serif;
   font-size: 17px;
-  line-height: 17px;
+  /* line-height: 17px; */
   margin: 0;
   padding: 0;
 }
@@ -38,9 +38,10 @@ input {
 input {
   border: 2px dashed #2b2b2b;
   border-radius: 4px;
-  width: 100%;
+  /* width: 100%; */
   height: auto;
   padding: 3px;
+  margin-bottom: 10px;
 }
 
 section {
@@ -50,11 +51,13 @@ section {
   background: #ffe7d3;
   border-radius: 4px;
   text-align: center;
+  /* padding: 20px; */
 }
 
 button {
   text-decoration: none;
 	color: #000;
+  margin-bottom: 10px;
 	font-family: sans-serif;
 	font-size: 20px;
 	border: 3px dashed #000;

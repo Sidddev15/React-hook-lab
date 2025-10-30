@@ -9,7 +9,7 @@ export default function DocTitle() {
   }, [title]);
 
   return (
-    <section style={{ height: "100%", width: "auto", padding: "20px"}}>
+    <section style={{ height: "auto", width: "100%" }}>
       <h2 style={{paddingBottom: '40px'}}>Document Title Sync</h2>
       <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
     </section>
